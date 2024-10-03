@@ -2,7 +2,7 @@
 FROM node:14-alpine
 
 # Install Git (necessary for npm to fetch dependencies from GitHub)
-RUN apk add --no-cache git
+RUN apk add --no-cache git openssh
 
 # Set the working directory
 WORKDIR /usr/src/app
