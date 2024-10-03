@@ -1,6 +1,9 @@
 # Use the official Node.js Alpine image as the base image
 FROM node:14-alpine
 
+# Install Git (necessary for npm to fetch dependencies from GitHub)
+RUN apk add --no-cache git
+
 # Set the working directory
 WORKDIR /usr/src/app
 
